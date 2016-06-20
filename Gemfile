@@ -45,6 +45,7 @@ group :development, :test do
   gem "omniauth-google-oauth2"
   gem 'active_model_serializers'
   gem 'dotenv-rails'
+  gem 'angular-rails-templates'
 end
 
 group :development do
