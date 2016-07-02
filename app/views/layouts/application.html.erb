@@ -6,9 +6,12 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-This is the party! 
-<ui-view></ui-view>
+<body ng-app="app">
+This is the party!
+<ui-view>
+
+
+</ui-view>
 
 </body>
 </html>
