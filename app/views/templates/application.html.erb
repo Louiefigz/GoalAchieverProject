@@ -1,0 +1,13 @@
+This is the application.html
+
+<%= button_to "Logout", destroy_user_session_path, :method => "delete" %>
+<%= link_to('Login', new_user_session_path)  %>
+
+<div ng-app="app">
+  <ui-view>
+
+
+  </ui-view>
+
+
+</div>
