@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
 
   def angular
-    render 'layouts/application'
+    render './app/assets/javascripts/views/application'
   end
 
 

@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'angular-rails-templates'
 gem 'rails-assets-angular-devise', source: "https://rails-assets.org"
+gem 'angularjs-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

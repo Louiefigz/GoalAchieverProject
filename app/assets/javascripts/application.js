@@ -4,6 +4,6 @@
 //= require angular-devise
 //= require angular-cookies
 //= require angular-resource
-//= require ngInfiniteScroll
 
-//= require_tree
+
+//= require_tree .

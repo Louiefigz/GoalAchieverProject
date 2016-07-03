@@ -15,11 +15,11 @@ angular
         url: "/",
         templateUrl: 'app/views/home.html',
         controller: 'TestCtrl as test'
-      });
+      })
       .state('home.auth', {
         url: 'auth',
         templateUrl: 'app/views/auth.html',
-        controller: 'SessionCtrl as session',
+        controller: 'SessionCtrl as session'
         // onEnter: function($state){
         //         if (sessionStorage['currUser']){
         //             var user = JSON.parse(sessionStorage['currUser'])
