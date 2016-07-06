@@ -10,10 +10,12 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @comment = Comment.new
   end
 
   # GET /posts/new
   def new
+    binding.pry 
     @post = Post.new
   end
 

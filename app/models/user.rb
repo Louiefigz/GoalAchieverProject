@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
          :omniauthable, :omniauth_providers => [:google_oauth2]
 
   has_many :posts
-  has_many :comments
+  has_many :comments, through: :posts
 
   validates_uniqueness_of :name
   validates_presence_of :name
