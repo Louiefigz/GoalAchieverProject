@@ -23,7 +23,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'angular-rails-templates'
-gem 'rails-assets-angular-devise', source: "https://rails-assets.org"
+gem 'rails-assets-angular-devise'
 gem 'angularjs-rails'
 
 # Use ActiveModel has_secure_password
@@ -48,6 +48,7 @@ group :development, :test do
   gem "omniauth-google-oauth2"
   gem 'active_model_serializers'
   gem 'dotenv-rails'
+  gem 'ancestry'
 
 end
 
