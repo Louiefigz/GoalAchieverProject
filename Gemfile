@@ -48,7 +48,10 @@ group :development, :test do
   gem "omniauth-google-oauth2"
   gem 'active_model_serializers'
   gem 'dotenv-rails'
-  gem 'ancestry'
+
+  # Ancestry Gem below was meant to handle hierarchies in a model. May use later.
+  #http://railscasts.com/episodes/262-trees-with-ancestry?autoplay=true
+  # gem 'ancestry'
 
 end
 
