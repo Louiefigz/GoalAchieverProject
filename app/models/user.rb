@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
 
   has_many :posts
   has_many :comments, through: :posts
+  has_many :goals
+  has_many :goal_categories, through: :goals
 
   validates_uniqueness_of :name
   validates_presence_of :name
