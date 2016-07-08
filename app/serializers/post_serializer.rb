@@ -6,7 +6,7 @@ class PostSerializer < ActiveModel::Serializer
   def kids
     kids = []
     post = Post.find(self.id)
-    kids = post.comments.where.not(parent_id:  nil).pluck(:id)
+    kids = post.comments.where(parent_id:  nil).pluck(:id)
     kids
   end
 end
