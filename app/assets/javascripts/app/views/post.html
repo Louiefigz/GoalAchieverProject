@@ -1,0 +1,23 @@
+Post.html 
+<div ng-if='post.data==false'>
+  <h1>There is no data here! </h1>
+</div>
+
+
+
+<div ng-if='post.data'>
+  <h1>{{post.data.title}}</h1>
+  <a href="{{post.data.url}}">Click to route to the actual URL page.</a>
+    <p>comments: {{post.data.kids.length}}</p>
+    <p>Score: {{post.data.score}}</p>
+    <p>By: {{post.data.by}}</p>
+    <p>Comments: {{post.data.kids.length}}</p><br>
+</div>
+
+<div ng-if="post.data.kids.length > 0">
+      <ul class="comments">
+          <li ng-repeat="comment in post.data.kids">
+            <item id="comment"></item>
+          </li>
+      </ul>
+</div>
