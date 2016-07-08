@@ -1,0 +1,10 @@
+<%= form_for @goal do |f|%>
+  <!-- <%= f.fields_for :new_goal do |g|%> -->
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+  <%= f.collection_select :goal_category_id, GoalCategory.order(:category),:id,:category, include_blank: true %>
+  <!-- <%= f.check_box :completed%> -->
+  <!-- <% end %> -->
+
+  <%= f.submit%>
+<% end %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160708030125) do
+ActiveRecord::Schema.define(version: 20160708040657) do
 
   create_table "comment_replies", force: :cascade do |t|
     t.string   "content"
@@ -37,11 +37,11 @@ ActiveRecord::Schema.define(version: 20160708030125) do
 
   create_table "goals", force: :cascade do |t|
     t.string   "content"
-    t.boolean  "completed"
     t.integer  "goal_category_id"
     t.integer  "parent_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.boolean  "completed",        default: false
   end
 
   create_table "post_tags", force: :cascade do |t|

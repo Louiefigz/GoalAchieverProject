@@ -10,8 +10,6 @@
   <% @post.comments.each do |comment|%>
 
     <% if comment.parent_id == nil%>
-
-
       <li><%= comment.content%></li>
       <ul>
         <% comment.replies.each do |reply|%>
