@@ -24,12 +24,13 @@ angular
 
         .state('post', {
             url: '/post/:id',
-            templateUrl: 'views/post.html',
+            templateUrl: '/app/views/post.html',
             controller: 'PostController as post',
             resolve: {
-                     post: function($stateParams, ApiService){
+                     post: function($stateParams, PostFactory){
                        console.log("app.js state provider for Post ");
-                       return ApiService.getPost($stateParams.id);
+                       console.log($stateParams.id)
+                       return PostFactory.show({id: $stateParams.id}).$promise
                      }
             }
         })

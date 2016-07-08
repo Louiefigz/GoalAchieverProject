@@ -1,0 +1,23 @@
+<div ng-if='item.data'>
+  <div ng-switch='item.data.type'>
+    <div ng-switch-when='story'>
+      <p>Title: {{item.data.title}}</p>
+      <p>By: {{item.data.by}}</p>
+      <p>Score: {{item.data.score}}</p>
+    <a ui-sref="post({ id: item.data.id })">URL: {{item.data.url}}</a>
+      <p>Comments: {{item.data.kids.length}}</p><br>
+      <h2> ------------------------------- </h2>
+    </div>
+
+
+      <div ng-switch-when='comment'>
+              <p>By {{item.data.by}}
+              <div ng-bind-html="item.data.text"></div>
+
+              <ul class="comments">
+                  <li ng-repeat="comment in item.data.kids">
+                    <item id="comment"></item>
+              </ul>
+          </div>
+        </div>
+      </div>

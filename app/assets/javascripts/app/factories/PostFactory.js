@@ -1,0 +1,36 @@
+function PostFactory($resource) {
+    console.log('PostFactory- first log')
+
+    var post = $resource('/posts/:id.json', {id: '@id'}, {
+          show: { method: 'GET',
+
+                   // isArray: true,
+                   transformResponse: function(data, header){
+
+                        console.log(JSON.parse(data))
+                        console.log("PostFactory data posted?")
+                        return JSON.parse(data)
+                  }},
+          update: { method: 'PATCH',
+                    transformResponse: function(data, header){
+                        console.log(JSON.parse(data))
+                        return JSON.parse(data)
+                  }},
+          create: { method: 'POST',
+                     transformResponse: function(data, header){
+                        console.log(JSON.parse(data))
+                        return JSON.parse(data)
+                  }},
+          destroy: { method: 'DELETE'}
+
+    })
+
+
+    return post
+
+
+}
+
+angular
+    .module('app')
+    .factory('PostFactory', PostFactory)
