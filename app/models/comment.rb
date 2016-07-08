@@ -6,7 +6,6 @@ class Comment < ActiveRecord::Base
 
 
   def comment=(attributes)
-    
      Comment.create(attributes)
   end
 

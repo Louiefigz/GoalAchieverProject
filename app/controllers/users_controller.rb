@@ -21,6 +21,11 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+
+    respond_to do |f|
+      f.html { render :show }
+      f.json { render json: @users}
+    end
     # render 'home'
   end
 
@@ -28,7 +33,7 @@ class UsersController < ApplicationController
   end
 
   def new
-      
+
   end
 
   def show

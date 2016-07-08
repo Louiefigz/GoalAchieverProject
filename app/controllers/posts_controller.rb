@@ -4,18 +4,27 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
+    
     @posts = Post.all
+    respond_to do |f|
+      f.html { render :index }
+      f.json { render json: @posts }
+    end
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
     @comment = Comment.new
+    respond_to do |f|
+      f.html { render :show }
+      f.json { render json: @post }
+    end
   end
 
   # GET /posts/new
   def new
-    binding.pry 
+    binding.pry
     @post = Post.new
   end
 

@@ -1,8 +1,17 @@
 class CommentsController < ApplicationController
   def create
-    binding.pry 
+  
     Comment.create(comment_params)
     redirect_to posts_path
+  end
+
+  def show
+
+    @comment = Comment.find(params[:id])
+    respond_to do |f|
+      f.html { render :show }
+      f.json { render json: @comment}
+    end
 
   end
 
